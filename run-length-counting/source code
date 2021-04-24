@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(){
+    char s[200];
+    int a[26]={0}, i;
+    
+    scanf("%s",&s);
+    for(i=0;s[i]!='\0';i++)
+    {
+        a[s[i]-'a']++;
+    }
+    
+    for(i=0;i<26;i++)
+    if(a[i]>0)
+    printf("%d%c",a[i],'a'+i);
+    printf("\n");
+    
+    return 0;
+}
